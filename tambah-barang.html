@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Barang - Ursula</title>
+</head>
+<body>
+
+    <header>
+        <h1>Ursula</h1>
+        <p>Aplikasi Kasir dan Pengelolaan Barang</p>
+    </header>
+
+    <nav aria-label="Navigasi utama">
+        <a href="index.html">Daftar Barang</a>
+        <a href="tambah-barang.html">Tambah Barang</a>
+        <a href="detail-barang.html">Detail Barang</a>
+    </nav>
+
+    <main>
+        <h2>Form Tambah Barang</h2>
+        <p>Isi formulir berikut untuk memasukkan data barang baru.</p>
+
+        <form action="#" method="post">
+
+            <p>
+                <label for="nama-barang">Nama Barang:</label>
+                <input
+                    type="text"
+                    id="nama-barang"
+                    name="nama-barang"
+                    required
+                >
+            </p>
+
+            <p>
+                <label for="harga">Harga Barang (Rp):</label>
+                <input
+                    type="number"
+                    id="harga"
+                    name="harga"
+                    min="0"
+                    required
+                >
+            </p>
+
+            <p>
+                <label for="stok">Jumlah Stok:</label>
+                <input
+                    type="number"
+                    id="stok"
+                    name="stok"
+                    min="0"
+                    required
+                >
+            </p>
+
+            <p>
+                <label for="kategori">Kategori Barang:</label>
+                <select id="kategori" name="kategori" required>
+                    <option value="">-- Pilih Kategori --</option>
+                    <option value="alat-tulis">Alat Tulis</option>
+                    <option value="buku">Buku</option>
+                    <option value="lainnya">Lainnya</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="deskripsi">Deskripsi Barang:</label>
+                <textarea
+                    id="deskripsi"
+                    name="deskripsi"
+                    rows="4"
+                    cols="30"
+                ></textarea>
+            </p>
+
+            <button type="submit">Simpan Barang</button>
+            <button type="reset">Kosongkan Form</button>
+
+        </form>
+
+        <p>
+            <a href="index.html">Kembali ke Daftar Barang</a>
+        </p>
+    </main>
+
+    <footer>
+        <p>Ursula - Aplikasi Kasir</p>
+    </footer>
+
+</body>
+</html>
