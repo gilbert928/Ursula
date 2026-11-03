@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Barang - Ursula</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -23,55 +24,59 @@
         <h2>Daftar Barang</h2>
         <p>Berikut adalah daftar barang yang tersedia di toko.</p>
 
-        <p>
-            <a href="tambah-barang.html">Tambah Barang Baru</a>
+        <p class="action-area">
+            <a class="button-primary" href="tambah-barang.html">
+                + Tambah Barang Baru
+            </a>
         </p>
 
-        <table>
-            <caption>Data barang yang tersedia di toko Ursula</caption>
+        <div class="table-container">
+            <table>
+                <caption>Data barang yang tersedia di toko Ursula</caption>
 
-            <thead>
-                <tr>
-                    <th scope="col">No.</th>
-                    <th scope="col">Nama Barang</th>
-                    <th scope="col">Harga</th>
-                    <th scope="col">Stok</th>
-                    <th scope="col">Aksi</th>
-                </tr>
-            </thead>
+                <thead>
+                    <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">Nama Barang</th>
+                        <th scope="col">Harga</th>
+                        <th scope="col">Stok</th>
+                        <th scope="col">Aksi</th>
+                    </tr>
+                </thead>
 
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Buku Tulis</td>
-                    <td>Rp5.000</td>
-                    <td>20</td>
-                    <td>
-                        <a href="detail-barang.html">Lihat Detail</a>
-                    </td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Buku Tulis</td>
+                        <td>Rp5.000</td>
+                        <td>20</td>
+                        <td>
+                            <a href="detail-barang.html">Lihat Detail</a>
+                        </td>
+                    </tr>
 
-                <tr>
-                    <td>2</td>
-                    <td>Pulpen</td>
-                    <td>Rp3.000</td>
-                    <td>50</td>
-                    <td>
-                        <a href="detail-barang.html">Lihat Detail</a>
-                    </td>
-                </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Pulpen</td>
+                        <td>Rp3.000</td>
+                        <td>50</td>
+                        <td>
+                            <a href="detail-barang.html">Lihat Detail</a>
+                        </td>
+                    </tr>
 
-                <tr>
-                    <td>3</td>
-                    <td>Penggaris</td>
-                    <td>Rp4.000</td>
-                    <td>15</td>
-                    <td>
-                        <a href="detail-barang.html">Lihat Detail</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                    <tr>
+                        <td>3</td>
+                        <td>Penggaris</td>
+                        <td>Rp4.000</td>
+                        <td>15</td>
+                        <td>
+                            <a href="detail-barang.html">Lihat Detail</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </main>
 
     <footer>
@@ -80,4 +85,5 @@
 
 </body>
 </html>
+
 
