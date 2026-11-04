@@ -4,86 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Barang - Ursula</title>
+    <title>Dashboard - Ursula</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-    <header>
-        <h1>Ursula</h1>
-        <p>Aplikasi Kasir dan Pengelolaan Barang</p>
-    </header>
-
-    <nav aria-label="Navigasi utama">
-        <a href="index.html">Daftar Barang</a>
-        <a href="tambah-barang.html">Tambah Barang</a>
-        <a href="detail-barang.html">Detail Barang</a>
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-md navbar-dark navbar-ursula">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Ursula</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menuUtama" aria-controls="menuUtama"
+                    aria-expanded="false" aria-label="Buka menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuUtama">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="daftar-barang.html">Daftar Barang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tambah-barang.html">Tambah Barang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="detail-barang.html">Detail Barang</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <main>
-        <h2>Daftar Barang</h2>
-        <p>Berikut adalah daftar barang yang tersedia di toko.</p>
+    <main class="container my-4">
+        <h1 class="h3 mb-1">Dashboard</h1>
+        <p class="text-secondary">Ringkasan toko Ursula hari ini.</p>
 
-        <p class="action-area">
-            <a class="button-primary" href="tambah-barang.html">
-                + Tambah Barang Baru
-            </a>
-        </p>
+        <!-- Kartu ringkasan: 1 kolom (HP), 2 kolom (tablet), 4 kolom (desktop) -->
+        <div class="row g-3 mb-4">
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm"><div class="card-body">
+                    <div class="text-secondary small">Jumlah Jenis Barang</div>
+                    <div class="stat-value">3</div>
+                </div></div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm"><div class="card-body">
+                    <div class="text-secondary small">Total Stok</div>
+                    <div class="stat-value">85</div>
+                </div></div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm"><div class="card-body">
+                    <div class="text-secondary small">Transaksi Hari Ini</div>
+                    <div class="stat-value">12</div>
+                </div></div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm"><div class="card-body">
+                    <div class="text-secondary small">Pendapatan Hari Ini</div>
+                    <div class="stat-value">Rp150.000</div>
+                </div></div>
+            </div>
+        </div>
 
-        <div class="table-container">
-            <table>
-                <caption>Data barang yang tersedia di toko Ursula</caption>
+        <div class="row g-3">
+            <!-- Barang terbaru -->
+            <div class="col-12 col-lg-8">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-white fw-semibold">Barang Terbaru</div>
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead>
+                                <tr><th scope="col">Nama Barang</th><th scope="col">Harga</th><th scope="col">Stok</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Buku Tulis</td><td>Rp5.000</td><td>20</td></tr>
+                                <tr><td>Pulpen</td><td>Rp3.000</td><td>50</td></tr>
+                                <tr><td>Penggaris</td><td>Rp4.000</td><td>15</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
 
-                <thead>
-                    <tr>
-                        <th scope="col">No.</th>
-                        <th scope="col">Nama Barang</th>
-                        <th scope="col">Harga</th>
-                        <th scope="col">Stok</th>
-                        <th scope="col">Aksi</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Buku Tulis</td>
-                        <td>Rp5.000</td>
-                        <td>20</td>
-                        <td>
-                            <a href="detail-barang.html">Lihat Detail</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>2</td>
-                        <td>Pulpen</td>
-                        <td>Rp3.000</td>
-                        <td>50</td>
-                        <td>
-                            <a href="detail-barang.html">Lihat Detail</a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>3</td>
-                        <td>Penggaris</td>
-                        <td>Rp4.000</td>
-                        <td>15</td>
-                        <td>
-                            <a href="detail-barang.html">Lihat Detail</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <!-- Aksi cepat -->
+            <div class="col-12 col-lg-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-white fw-semibold">Aksi Cepat</div>
+                    <div class="card-body d-grid gap-2 align-content-start">
+                        <a class="btn btn-primary" href="tambah-barang.html">+ Tambah Barang Baru</a>
+                        <a class="btn btn-outline-primary" href="daftar-barang.html">Lihat Daftar Barang</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
-    <footer>
-        <p>Ursula - Aplikasi Kasir</p>
+    <footer class="bg-white border-top py-3 mt-auto">
+        <div class="container text-center text-secondary small">Ursula - Aplikasi Kasir</div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
