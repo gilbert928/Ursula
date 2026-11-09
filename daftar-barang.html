@@ -36,6 +36,16 @@
             <a class="btn btn-primary" href="tambah-barang.html">+ Tambah Barang Baru</a>
         </div>
 
+        <div class="mb-3">
+            <label for="cari-barang" class="form-label visually-hidden">Cari barang</label>
+            <input type="search" id="cari-barang" class="form-control" placeholder="Cari nama barang...">
+        </div>
+
+        <div id="pesan-error" class="alert alert-danger d-none d-flex justify-content-between align-items-center" role="alert">
+            <span>Gagal memuat data barang. Periksa koneksi internet.</span>
+            <button id="btn-muat-ulang" type="button" class="btn btn-sm btn-outline-danger">Coba lagi</button>
+        </div>
+
         <div class="card shadow-sm">
             <div class="table-responsive">
                 <table class="table table-striped table-hover align-middle mb-0">
@@ -49,14 +59,7 @@
                             <th scope="col">Aksi</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr><td>1</td><td>Buku Tulis</td><td>Rp5.000</td><td>20</td>
-                            <td><a class="btn btn-sm btn-outline-primary" href="detail-barang.html">Lihat Detail</a></td></tr>
-                        <tr><td>2</td><td>Pulpen</td><td>Rp3.000</td><td>50</td>
-                            <td><a class="btn btn-sm btn-outline-primary" href="detail-barang.html">Lihat Detail</a></td></tr>
-                        <tr><td>3</td><td>Penggaris</td><td>Rp4.000</td><td>15</td>
-                            <td><a class="btn btn-sm btn-outline-primary" href="detail-barang.html">Lihat Detail</a></td></tr>
-                    </tbody>
+                    <tbody id="tabel-barang"></tbody>
                 </table>
             </div>
         </div>
@@ -67,5 +70,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/daftar.js"></script>
 </body>
 </html>

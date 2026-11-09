@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -34,24 +33,26 @@
                 <h1 class="h3">Detail Barang</h1>
                 <p class="text-secondary">Informasi lengkap barang yang tersedia di toko.</p>
 
-                <div class="row g-4">
+                <div id="d-loading" class="text-center py-5">
+                    <div class="spinner-border text-primary" role="status"></div>
+                    <p class="mt-2 mb-0">Memuat detail barang...</p>
+                </div>
+                <div id="d-error" class="alert alert-danger d-none" role="alert">Gagal memuat detail barang.</div>
+
+                <div id="d-konten" class="row g-4 d-none">
                     <div class="col-12 col-md-4 text-center">
-                        <img src="images/buku-tulis.jpg" class="detail-img rounded"
-                             alt="Buku tulis dengan sampul berwarna biru"
-                             onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22240%22 height=%22240%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23e2e8f0%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22%2364748b%22 font-family=%22Arial%22 font-size=%2216%22 text-anchor=%22middle%22>Gambar belum ada</text></svg>'">
-                        <p class="text-secondary small mt-2 mb-0">Contoh gambar buku tulis.</p>
+                        <img id="d-gambar" src="" alt="" class="detail-img rounded">
                     </div>
 
                     <div class="col-12 col-md-8">
-                        <h2 class="h4">Buku Tulis</h2>
+                        <h2 class="h4" id="d-judul"></h2>
                         <dl class="row mb-0">
-                            <dt class="col-sm-4">Kode Barang</dt><dd class="col-sm-8">BRG001</dd>
-                            <dt class="col-sm-4">Nama Barang</dt><dd class="col-sm-8">Buku Tulis</dd>
-                            <dt class="col-sm-4">Harga</dt><dd class="col-sm-8">Rp5.000</dd>
-                            <dt class="col-sm-4">Stok</dt><dd class="col-sm-8">20 buah</dd>
-                            <dt class="col-sm-4">Kategori</dt><dd class="col-sm-8">Alat Tulis</dd>
-                            <dt class="col-sm-4">Deskripsi</dt>
-                            <dd class="col-sm-8">Buku tulis untuk mencatat materi pelajaran atau catatan harian.</dd>
+                            <dt class="col-sm-4">Kode Barang</dt><dd class="col-sm-8" id="d-kode"></dd>
+                            <dt class="col-sm-4">Nama Barang</dt><dd class="col-sm-8" id="d-nama"></dd>
+                            <dt class="col-sm-4">Harga</dt><dd class="col-sm-8" id="d-harga"></dd>
+                            <dt class="col-sm-4">Stok</dt><dd class="col-sm-8" id="d-stok"></dd>
+                            <dt class="col-sm-4">Kategori</dt><dd class="col-sm-8" id="d-kategori"></dd>
+                            <dt class="col-sm-4">Deskripsi</dt><dd class="col-sm-8" id="d-deskripsi"></dd>
                         </dl>
                     </div>
                 </div>
@@ -69,5 +70,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/detail.js"></script>
 </body>
 </html>
+
